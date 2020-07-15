@@ -1,0 +1,29 @@
+<div>
+  <p>Nombre del Empleado:{{nombre}}</p>
+  <p>Edad:{{edad}}</p> 
+  <p *ngIf ="edad>=18 else menor">>Es mayor de edad</p> 
+  <ng-template #menor><p>Es un menor de edad</p></ng-template>
+  <p>duracion de empleos {{experiencia[0]}}, {{experiencia[1]}}, {{experiencia[2]}}, {{experiencia[3]}}</p>
+  <table border="1">
+    <tr><td colspan="2" >Experiencia</td></tr>
+    <tr *ngFor="let exp of experiencia">
+      <td >{{exp.empresa}}</td>
+      <td>{{exp.duracion}}</td>
+    </tr>
+  </table>
+  <p>total de experiencia: {{totalExperiencia()}} años</p>
+  <p>{{esActivo()}}</p>
+  <p>Puede visitar el sitio ingresando <a href="{{sitio}}">aquí</a></p>
+</div>
+<div>
+  <p>{{contador}}</p>
+  <button (click)="incrementar()">Sumar 1</button>
+  <button (click)="decrementar()">restar 1</button>
+</div>
+<div>
+  <p>uni direccional</p>
+  <p>Ingresa tu nombre<input type="text" [ngModel]="unidireccional">{{unidireccional}}</p>  
+  <p>bidireccional</p>
+  <p>Ingresa tu nombre<input type="text" [(ngModel)]="bidireccional">{{bidireccional}}</p>
+</div>
+

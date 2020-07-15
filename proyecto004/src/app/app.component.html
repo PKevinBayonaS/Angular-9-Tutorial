@@ -1,0 +1,18 @@
+<div style="text-align: center;">
+  <p>interpolacion</p>
+  <div>
+    <dado valor="{{valor1}}"></dado>
+    <dado valor="{{valor2}}"></dado>
+    <dado valor="{{valor3}}"></dado>
+  </div>
+  <p>binding</p>
+  <div>
+    <dado [valor]="valor1"></dado>
+    <dado [valor]="valor2"></dado>
+    <dado [valor]="valor3"></dado>
+  </div>
+<hr>
+<button (click)="tirar()">Trirar</button>
+<hr>
+<p>Resultado: {{resultado}}</p>
+</div>
